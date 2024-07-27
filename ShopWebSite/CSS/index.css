@@ -1,0 +1,78 @@
+/* index.html の CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cartOutput {
+    margin-bottom: 30px;
+    border: solid 2px #000000;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#totalPrice {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    color: #28a745; /* 合計金額の色を緑に設定 */
+}
+
+#output {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    cursor: pointer;
+}
+
+
+.product-card {
+    border: 1px solid #0e0000;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+#buyItem {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#buyItem:hover {
+    background-color: #218838;
+}
