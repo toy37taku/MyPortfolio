@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOG DETAILS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 外部CSSファイル -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+    <!-- ヘッダーセクション -->
+    <header class="bg-warning text-white text-center py-3">
+        <h1>
+            <img src="../img/dogFoot.png" alt="肉球アイコン" class="mr-2" style="width: 50px;">
+            DOG DETAILS
+        </h1>
+    </header>
+
+    <!-- メインコンテンツセクション -->
+    <main class="container my-4">
+        <!-- 犬の画像表示エリア -->
+        <div class="text-center mb-4">
+            <img id="output" src="../img/dogHouse.png" alt="犬小屋" class="dog-image">
+        </div>
+
+        <!-- 犬種選択セクション -->
+        <div class="text-center mb-4">
+            <select id="breedSelect" class="custom-select w-50 mx-auto">
+                <option value="">犬種を選択してください</option>
+            </select>
+        </div>
+
+        <!-- ランダムで情報を取得するボタン -->
+        <div class="text-center mb-4">
+            <button id="fetchButton" class="btn btn-success">ランダムで画像を取得</button>
+        </div>
+
+        <!-- 犬種の特徴表示エリア -->
+        <div id="info" class="text-center">
+            <p id="characteristics">ここに犬の特徴を表示します</p>
+        </div>
+    </main>
+
+    <!-- フッター(ハウスに戻す)セクション -->
+    <footer class="bg-warning text-center py-3">
+        <button id="resetButton" class="btn btn-secondary">ハウスに戻す</button>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- 外部JSファイル -->
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

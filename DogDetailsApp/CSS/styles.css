@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+.dog-image {
+    width: auto;
+    height: 300px; /* 固定高さ */
+    max-width: 100%; /* 画面サイズに応じて幅は調整 */
+    transition: opacity 0.5s ease-in-out; /* フェードイン/フェードアウトのアニメーション */
+}
+
+
+
+footer {
+    margin-top: 20px;
+    background-color: #ffcc00; /* 明るい黄色 */
+}
+
+#fetchButton, #resetButton {
+    transition: background-color 0.3s ease; /* 背景色の変化 */
+}
