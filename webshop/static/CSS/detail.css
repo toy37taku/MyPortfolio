@@ -17,9 +17,11 @@ h1 {
     margin-bottom: 20px;
 }
 
-#productDetail img {
-    max-width: 100%;
-    height: auto;
+.product-card {
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
 }
 

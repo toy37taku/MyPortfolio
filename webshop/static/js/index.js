@@ -27,7 +27,7 @@ window.onload = async function () {
     let data = '';
 
     // fetchでjsonからデータを引っ張ってくる
-    fetch('../data/data.json')
+    fetch('http://127.0.0.1:8000/api/products')
         .then(response => {
             return response.json();
         })
@@ -42,7 +42,7 @@ window.onload = async function () {
                 itemDiv.innerHTML = `
                 <h2>${item.name}</h2>
                 <p>価格: ${item.price}円</p>
-                <img src="../img/${item.img}" alt="${item.name}">
+                <img src="/MyPortfolio/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
                 <p>${item.detail}</p>
             `;
                 // itemDiv(各商品)をクリックしたときの処理として、該当するdetailのページを開く
@@ -80,7 +80,7 @@ window.onload = async function () {
 
     // 購入ボタンがクリックされたときの処理(confirmに遷移するだけ)
     buyItemButton.addEventListener('click', () => {
-        window.location.href = '../html/confirm.html';
+        window.location.href = '/./MyPortfolio/webshop/templates/user/confirm.html';
 
         // すべての詳細ウィンドウを閉じる処理
         // 上で開いたウィンドウをwindowObjectとして保存して、それがすべてclosedされてないときwindowObjectを閉じる処理をする

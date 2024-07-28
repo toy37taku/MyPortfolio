@@ -37,16 +37,11 @@ h1 {
     cursor: pointer;
 }
 
-
 .product-card {
-    border: 1px solid #0e0000;
     padding: 10px;
     text-align: center;
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     margin-bottom: 10px;
 }
 

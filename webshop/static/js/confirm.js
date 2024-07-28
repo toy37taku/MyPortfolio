@@ -59,12 +59,12 @@ window.onload = function () {
         sessionStorage.removeItem('cartItems');
 
         // 購入完了画面に遷移
-        window.location.href = '../html/complete.html';
+        window.location.href = '/./MyPortfolio/webshop/templates/user/complete.html';
     });
 
     // トップに戻るボタンのクリックイベント
     returnButton.addEventListener('click', () => {
         console.log('トップに戻るがクリックされました');
-        window.location.href = '../html/index.html'; // index.html に戻る
+        window.location.href = '/./MyPortfolio/webshop/templates/user/index.html'; // index.html に戻る
     });
 };
