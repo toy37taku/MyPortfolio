@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 fetchProducts();
             } else {
-                alert('削除に失敗しました。');
+                alert('削除に失敗しました');
             }
         }
     };
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productModal.style.display = 'none';
             fetchProducts();
         } else {
-            alert('保存に失敗しました。');
+            alert('保存に失敗しました');
         }
     });
 
