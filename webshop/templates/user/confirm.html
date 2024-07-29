@@ -1,23 +1,29 @@
 <!-- カートの中をリストで表示
  購入ボタン→カートの中身を削除し完了画面へ遷移 -->
 
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>購入確認</title>
-    <link rel="stylesheet" href="/MyPortfolio/webshop/static/CSS/index.css">
-</head>
-
-<body>
-    <h1>購入確認</h1>
-    <div id="cartItems"></div>
-    <p id="totalPrice"></p>
-    <button id="purchaseButton">購入する</button>
-    <input type="button" value="トップにもどる" id="returnButton">
-    <script type="module" src="/./MyPortfolio/webshop/static/js/confirm.js"></script>
-</body>
-
-</html>
+ <!DOCTYPE html>
+ <html lang="ja">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>購入確認</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/webshop/static/css/style.css">
+ </head>
+ 
+ <body>
+     <div class="container mt-4">
+         <h1 class="mb-4 text-center">購入確認</h1>
+         <div id="cartItems" class="mb-4"></div>
+         <p id="totalPrice" class="text-right font-weight-bold"></p>
+         <div class="text-center">
+             <button class="btn btn-success mx-2" id="purchaseButton">購入する</button>
+             <button class="btn btn-secondary mx-2" id="returnButton">トップにもどる</button>
+         </div>
+     </div>
+     <script type="module" src="/webshop/static/js/confirm.js"></script>
+ </body>
+ 
+ </html>
+ 

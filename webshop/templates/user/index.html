@@ -2,30 +2,37 @@
  それらをクリックすると商品詳細画面へ推移
  購入ボタン→購入確認画面へ遷移(新しくウィンドウを開く) -->
 
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST SHOP SITE</title>
-    <link rel="stylesheet" href="/MyPortfolio/webshop/static/CSS/index.css">
-</head>
-
-<body>
-    <h1>TEST SHOP SITE</h1>
-
-    <div id="cartOutput">
-        <h3>あなたのカート</h3>
-        <ul id="cartItems"></ul>
-        <p id="totalPrice">合計金額: 0円</p>
-    </div>
-
-    <input type="button" value="購入" id="buyItem">
-
-    <div id="output"></div>
-
-    <script type="module" src="/./MyPortfolio/webshop/static/js/index.js"></script>
-</body>
-
-</html>
+ <!DOCTYPE html>
+ <html lang="ja">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TEST SHOP SITE</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/webshop/static/css/style.css">
+ </head>
+ 
+ <body>
+     <div class="container">
+         <h1 class="my-4 text-center">TEST SHOP SITE</h1>
+ 
+         <div id="cartOutput" class="mb-4">
+             <h3>あなたのカート</h3>
+             <ul id="cartItems" class="list-group"></ul>
+             <p id="totalPrice">合計金額: 0円</p>
+         </div>
+         
+         <div class="text-center">
+         <button class="btn btn-primary mb-4" id="buyItem">購入確認画面へ</button>
+        </div>
+         <div id="output" class="row">
+             <!-- 商品情報がここに追加される -->
+         </div>
+     </div>
+ 
+     <script type="module" src="/webshop/static/js/index.js"></script>
+ </body>
+ 
+ </html>
+ 

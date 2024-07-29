@@ -1,0 +1,57 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+#cartOutput {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/* カートのアイテムリスト */
+#cartItems ul {
+    list-style-type: none;
+    padding: 0;
+}
+#cartItems li {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-img-top {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+}
+
+/* 合計金額 */
+#totalPrice {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* ボタンのスタイル */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}

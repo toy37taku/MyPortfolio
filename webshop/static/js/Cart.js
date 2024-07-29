@@ -8,8 +8,15 @@ export default class Cart {
 
     // メソッド:商品追加
     addItem(item) {
-        this.itemList.push(item); // 引数で受け取った商品オブジェクトを商品リストに追加する
+        const existingItem = this.itemList.find(cartItem => cartItem.id === item.id);
+        if (existingItem) {
+            existingItem.quantity += item.quantity;
+        } else {
+            item.quantity = item.quantity || 1; // デフォルトの数量を1に設定
+            this.itemList.push(item);
+        }
     }
+    
 
     // メソッド:商品一覧取得
     getItems() {

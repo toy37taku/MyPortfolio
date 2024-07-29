@@ -81,9 +81,8 @@ def add_product_page():
                 img_filename = f"{new_product_id}.{ext}"
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], img_filename))
                 new_product['img'] = img_filename
-            else:
-                return "適切なファイルではありません", 400  # 適切なファイルがアップロードされなかった場合
 
+        # 画像ファイル名を含めて保存
         products['items'].append(new_product)
         save_json_data(products)
 

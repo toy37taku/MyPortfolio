@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productDiv.innerHTML = `
                 <h2>${product.name}</h2>
                 <p>価格: ${product.price}円</p>
-                <img src="/./MyPortfolio/webshop/static/img/${item.img}" alt="${product.name}">
+                <img src="/webshop/static/img/${item.img}" alt="${product.name}">
                 <p>${product.detail}</p>
                 <a href="javascript:void(0);" onclick="editProduct(${product.id})">編集</a>
                 <button onclick="deleteProduct(${product.id})">削除</button>

@@ -7,6 +7,7 @@ window.onload = async function () {
     const productIndex = parseInt(urlParams.get('index'), 10); // インデックスを整数に変換
     const productDetail = document.getElementById('productDetail');
     const addToCartButton = document.getElementById('addToCartButton');
+    const quantityInput = document.getElementById('quantity');
     const myCart = new Cart();
 
     try {
@@ -27,16 +28,29 @@ window.onload = async function () {
         productDetail.innerHTML = `
             <h2>${item.name}</h2>
             <p>価格: ${item.price}円</p>
-            <img src="/MyPortfolio/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
+            <img src="/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
             <p>${item.detail}</p>
         `;
 
         addToCartButton.addEventListener('click', () => {
-            myCart.addItem(item);
+            const quantity = parseInt(quantityInput.value, 10);
+            if (isNaN(quantity) || quantity < 1) {
+                alert('数量は1以上の整数で入力してください');
+                return;
+            }
+
+            const cartItem = {
+                ...item,
+                quantity: quantity
+            };
+
+            myCart.addItem(cartItem);
+            alert(`${item.name}をカートに追加しました。`);
+            sessionStorage.setItem('cartItems', JSON.stringify(myCart.getItems()));
             window.close();
 
             if (window.opener) {
-                window.opener.postMessage({ type: 'addItemToCart', item: item }, '*');
+                window.opener.postMessage({ type: 'addItemToCart', item: cartItem }, '*');
             }
         });
     } catch (error) {
