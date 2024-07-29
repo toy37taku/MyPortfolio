@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productIdInput = document.getElementById('productId');
 
     const fetchProducts = async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/products');
+        const response = await fetch('https://webshop-sandy.vercel.app/api/products');
         const data = await response.json();
         renderProducts(data.items);
     };

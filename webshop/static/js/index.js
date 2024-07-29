@@ -28,7 +28,7 @@ window.onload = async function () {
                 itemDiv.classList.add('col-md-4', 'mb-4'); // Bootstrapのグリッドクラスを使用
                 itemDiv.innerHTML = `
                 <div class="card">
-                    <img src="/webshop/static/img/${item.img}" class="card-img-top" alt="${item.name}">
+                    <img src="/MyPortfolio/webshop/static/img/${item.img}" class="card-img-top" alt="${item.name}">
                     <div class="card-body">
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">価格: ${item.price}円</p>
@@ -60,7 +60,7 @@ window.onload = async function () {
     };
 
     buyItemButton.addEventListener('click', () => {
-        window.location.href = '/webshop/templates/user/confirm.html';
+        window.location.href = '/MyPortfolio/webshop/templates/user/confirm.html';
 
         detailWindows.forEach(windowObject => {
             if (windowObject && !windowObject.closed) {
