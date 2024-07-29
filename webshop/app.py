@@ -52,7 +52,7 @@ def get_products():
 @app.route('/')
 def home_page():
     products = get_json_data()['items']
-    return render_template('index.html', products=products)
+    return render_template('user/index.html', products=products)
 
 @app.route('/admin')
 def admin_page():
