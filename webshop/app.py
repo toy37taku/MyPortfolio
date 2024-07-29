@@ -4,7 +4,7 @@ import os
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 CORS(app)
 
 # アップロードフォルダのパスを指定
@@ -18,7 +18,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # データファイルのパス
-DATA_FILE = 'data/products.json'
+DATA_FILE = 'MyPortfolio/webshop/data/products.json'
 
 # JSONデータを読み込む関数
 def get_json_data():
