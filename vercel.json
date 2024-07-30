@@ -40,6 +40,10 @@
             "dest": "/webshop/$1"
         },
         {
+            "src": "/api/(.*)",
+            "dest": "/webshop/app.py"
+        },
+        {
             "src": "/",
             "dest": "/index.html"
         },

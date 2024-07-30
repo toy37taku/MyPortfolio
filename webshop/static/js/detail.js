@@ -11,7 +11,7 @@ window.onload = async function () {
     const myCart = new Cart();
 
     try {
-        const response = await fetch('https://webshop-sandy.vercel.app/api/products');
+        const response = await fetch('https://my-portfolio-toy37tak.vercel.app/api/products');
         if (!response.ok) {
             throw new Error('ネットワークのレスポンスが異常です');
         }

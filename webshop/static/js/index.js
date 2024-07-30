@@ -17,7 +17,7 @@ window.onload = async function () {
 
     let data = '';
 
-    fetch('https://webshop-sandy.vercel.app/api/products')
+    fetch('https://my-portfolio-toy37tak.vercel.app/api/products')
         .then(response => response.json())
         .then(jsonData => {
             data = jsonData;
