@@ -28,10 +28,6 @@
         {
           "name": "webshop",
           "root": "webshop"
-        },
-        {
-          "name": "index",
-          "root": "index"
         }
     ]
 }
