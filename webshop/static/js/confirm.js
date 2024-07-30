@@ -53,11 +53,11 @@ window.onload = function () {
         sessionStorage.removeItem('cartItems');
 
         // 購入完了画面に遷移
-        window.location.href = '/webshop/templates/user/complete.html';
+        window.location.href = '/webshop/user/complete.html';
     });
 
     // トップに戻るボタンのクリックイベント
     returnButton.addEventListener('click', () => {
-        window.location.href = '/webshop/templates/user/index.html'; // index.html に戻る
+        window.location.href = '/webshop/user/index.html'; // index.html に戻る
     });
 };

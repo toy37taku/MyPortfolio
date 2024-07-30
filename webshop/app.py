@@ -51,8 +51,7 @@ def get_products():
 
 @app.route('/')
 def home_page():
-    products = get_json_data()['items']
-    return render_template('admin.html', products=products)
+    return render_template('index.html')
 
 @app.route('/admin')
 def admin_page():
@@ -123,6 +122,11 @@ def delete_product(product_id):
         products['items'].remove(product)
         save_json_data(products)
     return redirect(url_for('admin_page'))
+
+@app.route('/user')
+def user_page():
+    # ユーザー向けのページを表示
+    return render_template('user.html')
 
 if __name__ == "__main__":
     app.debug = True
