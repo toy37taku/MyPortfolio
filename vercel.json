@@ -16,18 +16,16 @@
             "dest": "/static/$1"
         },
         {
-            "src": "/(.*)",
-            "dest": "/app.py"
-        }
-    ],
-    "projects": [
-        {
-          "name": "dogapp",
-          "root": "dogapp"
+            "src": "/dogapp/(.*)",
+            "dest": "/dogapp/$1"
         },
         {
-          "name": "webshop",
-          "root": "webshop"
+            "src": "/webshop/(.*)",
+            "dest": "/webshop/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
         }
     ]
 }
