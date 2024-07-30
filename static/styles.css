@@ -1,14 +1,27 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+/* リセットと基本スタイル */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 0;
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -17,12 +30,11 @@ header h1 {
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 nav ul li a {
@@ -31,16 +43,39 @@ nav ul li a {
 }
 
 section {
-    padding: 2rem;
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
 }
 
 .project {
     margin-bottom: 2rem;
 }
 
+.project a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background: #333;
     color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    padding: 1rem;
+}
+
+footer .container {
+    width: 80%;
+    margin: 0 auto;
 }
