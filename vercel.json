@@ -32,6 +32,10 @@
             "dest": "/dogapp/$1"
         },
         {
+            "src": "/webshop/static/(.*)",
+            "dest": "/webshop/static/$1"
+        },
+        {
             "src": "/webshop/(.*)",
             "dest": "/webshop/$1"
         },
