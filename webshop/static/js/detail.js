@@ -28,7 +28,7 @@ window.onload = async function () {
         productDetail.innerHTML = `
             <h2>${item.name}</h2>
             <p>価格: ${item.price}円</p>
-            <img src="/MyPortfolio/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
+            <img src="/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
             <p>${item.detail}</p>
         `;
 
