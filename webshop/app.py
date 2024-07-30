@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify,send_from_directory
 import json
 import os
 from flask_cors import CORS
@@ -6,6 +6,9 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
+
+# デバッグモードを有効にする
+app.config['DEBUG'] = True
 
 # アップロードフォルダのパスを指定
 UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/img')
@@ -22,8 +25,13 @@ DATA_FILE = 'data/products.json'
 
 # JSONデータを読み込む関数
 def get_json_data():
-    with open(DATA_FILE, 'r', encoding='utf-8') as file:
-        return json.load(file)
+    try:
+        with open(DATA_FILE, 'r', encoding='utf-8') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {'items': []}  # ファイルが存在しない場合は空のデータを返す
+    except json.JSONDecodeError:
+        return {'items': []}  # JSONのデコードに失敗した場合は空のデータを返す
 
 # JSONデータを書き込む関数
 def save_json_data(data):
@@ -51,7 +59,7 @@ def get_products():
 
 @app.route('/')
 def home_page():
-    return render_template('index.html')
+    return send_from_directory('user', 'index.html')
 
 @app.route('/admin')
 def admin_page():
@@ -129,5 +137,4 @@ def user_page():
     return render_template('user.html')
 
 if __name__ == "__main__":
-    app.debug = True
     app.run(host="0.0.0.0", port=8000)

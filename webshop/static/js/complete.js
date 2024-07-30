@@ -5,5 +5,5 @@
 const returnButton = document.getElementById('returnButton');
 returnButton.addEventListener('click', () => {
     console.log('トップに戻るがクリックされました')
-    window.location.href = '/webshop/user/index.html'; // index.html に戻る
+    window.location.href = '/webshop/user/webshop.html'; // index.html に戻る
 });

@@ -1,59 +1,48 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "webshop/app.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "webshop/static/**/*",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "dogapp/**/*",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "webshop/**/*",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "index.html",
-            "use": "@vercel/static"
-        }
+      {
+        "src": "webshop/app.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "webshop/static/**/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "dogapp/**/*",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      }
     ],
     "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
-            "src": "/dogapp/(.*)",
-            "dest": "/dogapp/$1"
-        },
-        {
-            "src": "/webshop/static/(.*)",
-            "dest": "/webshop/static/$1"
-        },
-        {
-            "src": "/webshop/(.*)",
-            "dest": "/webshop/$1"
-        },
-        {
-            "src": "/api/(.*)",
-            "dest": "/webshop/app.py"
-        },
-        {
-            "src": "/",
-            "dest": "/index.html"
-        },
-        {
-            "src": "/admin/(.*)",
-            "dest": "/admin/$1"
-        },
-        {
-            "src": "/user/(.*)",
-            "dest": "/user/$1"
-        }
+      {
+        "src": "/api/(.*)",
+        "dest": "/webshop/app.py"
+      },
+      {
+        "src": "/static/(.*)",
+        "dest": "/webshop/static/$1"
+      },
+      {
+        "src": "/dogapp/(.*)",
+        "dest": "/dogapp/$1"
+      },
+      {
+        "src": "/webshop/(.*)",
+        "dest": "/webshop/$1"
+      },
+      {
+        "src": "/admin/(.*)",
+        "dest": "/webshop/app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
     ]
-}
+  }
+  
