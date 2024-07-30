@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "app.py",
+            "src": "webshop/app.py",
             "use": "@vercel/python"
         },
         {
@@ -24,7 +24,7 @@
             "dest": "/webshop/$1"
         },
         {
-            "src": "/(.*)",
+            "src": "/",
             "dest": "/index.html"
         }
     ]
