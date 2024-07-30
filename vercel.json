@@ -19,15 +19,5 @@
             "src": "/(.*)",
             "dest": "/app.py"
         }
-    ],
-    "projects": [
-        {
-          "name": "dogapp",
-          "root": "dogapp"
-        },
-        {
-          "name": "webshop",
-          "root": "webshop"
-        }
     ]
 }
