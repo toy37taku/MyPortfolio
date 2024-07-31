@@ -24,9 +24,12 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-# データファイルのパス
-DATA_FILE = 'static/data/products.json'
-
+# デプロイ環境に応じたパス設定
+if os.getenv('ENV') == 'production':
+    DATA_FILE = '/webshop/static/data/products.json'
+else:
+    DATA_FILE = 'static/data/products.json'
+    
 # JSONデータを読み込む関数
 def get_json_data():
     try:
@@ -58,8 +61,12 @@ def save_product(product):
 
 @app.route('/api/products', methods=['GET'])
 def get_products():
-    data = get_json_data()
-    return jsonify(data)
+    try:
+        data = get_json_data()
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"error": "サーバーエラー"}), 500
 
 @app.route('/')
 def home_page():
