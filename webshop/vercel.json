@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+      {
+          "src": "webshop/app.py",
+          "use": "@vercel/python"
+      },
+      {
+          "src": "webshop/static/**/*",
+          "use": "@vercel/static"
+      }
+  ],
+  "routes": [
+      {
+          "src": "/api/(.*)",
+          "dest": "/webshop/app.py"
+      },
+      {
+          "src": "/static/(.*)",
+          "dest": "/webshop/static/$1"
+      },
+      {
+          "src": "/admin/(.*)",
+          "dest": "/webshop/app.py"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "/webshop/app.py"
+      }
+  ]
+}

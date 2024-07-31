@@ -1,8 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify,send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, jsonify, send_from_directory
 import json
 import os
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
@@ -59,8 +62,18 @@ def get_products():
 
 @app.route('/')
 def home_page():
-    products = get_json_data()['items']
-    return render_template('admin.html', products=products)
+    return render_template('login.html')
+
+@app.route('/login', methods=['POST'])
+def login():
+    user_id = request.form['user_id']
+    password = request.form['password']
+
+    if user_id == os.getenv('ADMIN_ID') and password == os.getenv('ADMIN_PASSWORD'):
+        return redirect(url_for('admin_page'))
+    else:
+        error = "IDまたはパスワードが違います"
+        return render_template('login.html', error=error)
 
 @app.route('/admin')
 def admin_page():
@@ -134,7 +147,6 @@ def delete_product(product_id):
 
 @app.route('/user')
 def user_page():
-    # ユーザー向けのページを表示
     return render_template('user.html')
 
 if __name__ == "__main__":
