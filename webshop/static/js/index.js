@@ -60,7 +60,7 @@ window.onload = async function () {
     };
 
     buyItemButton.addEventListener('click', () => {
-        window.location.href = 'MyPortfolio/webshop/user/confirm.html';
+        window.location.href = './confirm.html';
 
         detailWindows.forEach(windowObject => {
             if (windowObject && !windowObject.closed) {
