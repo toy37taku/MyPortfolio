@@ -18,10 +18,25 @@
          <h1 class="my-4 text-center">TEST SHOP SITE</h1>
  
          <div id="cartOutput" class="mb-4">
-             <h3>あなたのカート</h3>
-             <ul id="cartItems" class="list-group"></ul>
-             <p id="totalPrice">合計金額: 0円</p>
-         </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">あなたのカート</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="cartItems" class="list-group">
+                        <!-- カートアイテムがここにリスト表示されます -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            商品名
+                            <span class="badge badge-primary badge-pill">価格</span>
+                        </li>
+                        <!-- 追加のアイテムがここに入ります -->
+                    </ul>
+                </div>
+                <div class="card-footer text-right">
+                    <p id="totalPrice" class="mb-0">合計金額: 0円</p>
+                </div>
+            </div>
+        </div>
          
          <div class="text-center">
          <button class="btn btn-primary mb-4" id="buyItem">購入確認画面へ</button>

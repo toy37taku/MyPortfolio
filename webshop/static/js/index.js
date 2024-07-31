@@ -24,7 +24,7 @@ window.onload = async function () {
             data.items.forEach((item, index) => {
                 // 各商品情報を表示するためのカードを作成
                 const itemDiv = document.createElement('div');
-                itemDiv.classList.add('col-md-4', 'mb-4'); // Bootstrapのグリッドクラスを使用
+                itemDiv.classList.add('col-md-4', 'mb-4');
                 itemDiv.innerHTML = `
                 <div class="card">
                     <img src="../static/img/${item.img}" class="card-img" alt="${item.name}">

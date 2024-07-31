@@ -54,19 +54,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.project {
-    margin-bottom: 2rem;
-}
-
-.project a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
 footer {
     background: #333;
     color: #fff;
