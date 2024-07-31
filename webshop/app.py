@@ -25,7 +25,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # データファイルのパス
-DATA_FILE = 'data/products.json'
+DATA_FILE = 'static/data/products.json'
 
 # JSONデータを読み込む関数
 def get_json_data():
@@ -151,4 +151,4 @@ def user_page():
     return render_template('user.html')
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=True)
