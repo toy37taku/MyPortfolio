@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECサイト管理者画面[Python]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href=".../static/styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</head>
+
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1 class="mb-0 title">Takumi TOYOOKA's Portfolio</h1>
+            <nav class="mt-2">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="./index.html">ポートフォリオTOP</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#screenshots">スクリーンショット</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#code">コードリンク</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+            <h2 class="h2 mb-2">ECサイト管理者画面[Python]</h2>
+
+    <div class="container">
+        <section id="screenshots">
+            <h4 class="h4 mb-2">スクリーンショット</h4>
+            <h6 class="h6 mb-2">各画像をクリックすると、それぞれのポイントが表示されます</h6>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    管理者画面トップ
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/admin.png" alt="管理者画面トップ" class="img-fluid" data-toggle="modal" data-target="#modalAdmin">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    ログイン画面
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/login.png" alt="ログイン画面" class="img-fluid" data-toggle="modal" data-target="#modalLogin">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    ログイン失敗画面
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/loginFail.png" alt="ログイン失敗画面" class="img-fluid" data-toggle="modal" data-target="#modalLoginFail">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    商品編集画面
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/edit.png" alt="商品編集画面" class="img-fluid" data-toggle="modal" data-target="#modalEdit">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    商品削除画面
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/delete.png" alt="商品削除画面" class="img-fluid" data-toggle="modal" data-target="#modalDelete">
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    商品追加画面
+                </div>
+                <div class="card-body">
+                    <img src="../static/img/add.png" alt="商品追加画面" class="img-fluid" data-toggle="modal" data-target="#modalAdd">
+                </div>
+            </div>
+        </section>
+
+        <section id="code">
+            <h2 class="h4 mb-3">GitHub コード</h2>
+            <div class="card">
+                <div class="card-header">
+                    コードリンク
+                </div>
+                <div class="card-body">
+                    <a href="https://gist.github.com/toy37taku/2d4edcfa216baf73f45ccd71951874a2" target="_blank" class="btn btn-primary mb-3">コードはこちら(GitHub Gistにリンクします)</a>
+                    <a href="https://github.com/toy37taku/MyPortfolio/tree/main/webshop" target="_blank" class="btn btn-primary mb-3">webshop全体のGitHubリポジトリはこちら</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- モーダルのコード -->
+    <div class="modal fade" id="modalAdmin" tabindex="-1" role="dialog" aria-labelledby="modalAdminLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdminLabel">管理者画面トップ</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ポイント：</strong>この画面では、管理者がECサイトの全体を確認できるダッシュボード機能が提供されています。</p>
+                    <img src="../static/img/admin.png" alt="管理者画面トップ" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLoginLabel">ログイン画面</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ポイント：</strong>この画面では、Pythonの関数を用いてログイン機能を提供しています。セッションを使い管理しています。</p>
+                    <img src="../static/img/login.png" alt="ログイン画面" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLoginFail" tabindex="-1" role="dialog" aria-labelledby="modalLoginFailLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLoginFailLabel">ログイン失敗画面</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ポイント：</strong>ログインに失敗すると、URLは変わらずエラーメッセージが表示される仕組みです</p>
+                    <img src="../static/img/loginFail.png" alt="ログイン失敗画面" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditLabel">商品編集画面</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ポイント：</strong>この画面では、各商品の編集ができます。IDは編集できないようになっています。</p>
+                    <img src="../static/img/edit.png" alt="商品編集画面" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDeleteLabel">商品削除画面</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>ポイント：</strong>削除ボタンを押下したとき、この画面がアラートとして表示されます。</p>
+                    <img src="../static/img/delete.png" alt="商品削除画面" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAddLabel">商品追加画面</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="../static/img/add.png" alt="商品追加画面" class="img-fluid">
+                    <p><strong>ポイント：</strong>この画面では、新規商品を登録することができます。管理しやすいように画像名は"id.拡張子"に自動で登録されます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2024 Takumi TOYOOKA</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
