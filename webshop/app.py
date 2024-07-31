@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # ローカル環境での .env ファイルの読み込み
 load_dotenv()
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 CORS(app)
 
 # デバッグモードを有効にする
