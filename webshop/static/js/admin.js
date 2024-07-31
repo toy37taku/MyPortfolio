@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productIdInput = document.getElementById('productId');
 
     const fetchProducts = async () => {
-        const response = await fetch('https://my-portfolio-toy37tak.vercel.app/api/products');
+        const response = await fetch('https://webshop-toy37tak.vercel.app/api/products');
         const data = await response.json();
         renderProducts(data.items);
     };
