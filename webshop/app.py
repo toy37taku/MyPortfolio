@@ -151,5 +151,4 @@ def user_page():
     return render_template('user.html')
 
 if __name__ == "__main__":
-    # WEBサーバー実行
-    app.run(host="0.0.0.0",port=5001,debug=True)
+    app.run(host="0.0.0.0", port=5001, debug=True)
