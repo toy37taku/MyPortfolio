@@ -44,7 +44,7 @@ window.onload = async function () {
 
     window.openDetail = function (index) {
         const item = data.items[index];
-        const newWindow = window.open(`detail.html?index=${index}`, '_blank', 'width=500,height=650');
+        const newWindow = window.open(`detail.html?index=${index}`, '_blank', 'width=600,height=750');
 
         detailWindows.push(newWindow);
         newWindow.addEventListener('DOMContentLoaded', () => {
