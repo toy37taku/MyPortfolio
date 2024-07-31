@@ -16,6 +16,10 @@
       "dest": "/static/$1"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/webshop/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/webshop/app.py"
     }
