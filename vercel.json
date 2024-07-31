@@ -3,17 +3,16 @@
   "builds": [
     {
       "src": "webshop/app.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": ["webshop/static/**"]
+      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/webshop/app.py"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
     },
     {
       "src": "/static/(.*)",
