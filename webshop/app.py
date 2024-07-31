@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
 import json
 from flask_cors import CORS
-from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
 # ローカル環境での .env ファイルの読み込み
@@ -17,14 +16,18 @@ app.config['DEBUG'] = True
 # アップロードフォルダのパスを指定
 UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/img')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 最大アップロードサイズ（16MBなど）
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 最大アップロードサイズ
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-DATA_FILE = '/webshop/static/data/products.json'
+# 環境に応じてファイルパスを変更する
+if os.getenv('ENV') == 'production':
+    DATA_FILE = '/webshop/static/data/products.json'
+else:
+    DATA_FILE = 'static/data/products.json'
 
 # JSONデータを読み込む関数
 def get_json_data():
@@ -32,10 +35,8 @@ def get_json_data():
         with open(DATA_FILE, 'r', encoding='utf-8') as file:
             return json.load(file)
     except FileNotFoundError:
-        print('Fileエラー')
         return {'items': []}  # ファイルが存在しない場合は空のデータを返す
     except json.JSONDecodeError:
-        print('Jsonのデータがおかしい')
         return {'items': []}  # JSONのデコードに失敗した場合は空のデータを返す
 
 # JSONデータを書き込む関数

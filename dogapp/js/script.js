@@ -55,7 +55,7 @@ document.getElementById('resetButton').addEventListener('click', () => {
 
     output.style.opacity = 0; // フェードアウト
     setTimeout(() => {
-        output.src = '../img/dogHouse.png'; // 犬小屋の画像に戻す
+        output.src = '../dogapp/img/dogHouse.png'; // 犬小屋の画像に戻す
         output.style.opacity = 1; // フェードイン
     }, 500);
 
