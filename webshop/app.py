@@ -59,7 +59,8 @@ def get_products():
 
 @app.route('/')
 def home_page():
-    return send_from_directory('user', 'index.html')
+    products = get_json_data()['items']
+    return render_template('admin.html', products=products)
 
 @app.route('/admin')
 def admin_page():
