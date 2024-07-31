@@ -3,9 +3,6 @@ import json
 import os
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
@@ -148,6 +145,3 @@ def delete_product(product_id):
 @app.route('/user')
 def user_page():
     return render_template('user.html')
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
