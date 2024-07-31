@@ -32,8 +32,10 @@ def get_json_data():
         with open(DATA_FILE, 'r', encoding='utf-8') as file:
             return json.load(file)
     except FileNotFoundError:
+        print('Fileエラー')
         return {'items': []}  # ファイルが存在しない場合は空のデータを返す
     except json.JSONDecodeError:
+        print('Jsonのデータがおかしい')
         return {'items': []}  # JSONのデコードに失敗した場合は空のデータを返す
 
 # JSONデータを書き込む関数
@@ -148,10 +150,6 @@ def delete_product(product_id):
         products['items'].remove(product)
         save_json_data(products)
     return redirect(url_for('admin_page'))
-
-@app.route('/user')
-def user_page():
-    return render_template('user.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)
