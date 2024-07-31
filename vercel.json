@@ -5,7 +5,10 @@
       "src": "webshop/app.py",
       "use": "@vercel/python",
       "config": {
-        "includeFiles": ["webshop/static/**"]
+        "includeFiles": [
+          "webshop/static/**",
+          "webshop/static/data/**"
+        ]
       }
     }
   ],
