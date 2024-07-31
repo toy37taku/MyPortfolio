@@ -11,7 +11,7 @@ window.onload = async function () {
     const myCart = new Cart();
 
     try {
-        const response = await fetch('data/products.json');
+        const response = await fetch('../static/data/products.json');
         if (!response.ok) {
             throw new Error('ネットワークのレスポンスが異常です');
         }
@@ -28,7 +28,7 @@ window.onload = async function () {
         productDetail.innerHTML = `
             <h2>${item.name}</h2>
             <p>価格: ${item.price}円</p>
-            <img src="/webshop/static/img/${item.img}" alt="${item.name}" class="product-card">
+            <img src="../static/img/${item.img}" alt="${item.name}" class="product-card">
             <p>${item.detail}</p>
         `;
 
