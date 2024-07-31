@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify, send_from_directory
-import json
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import os
+import json
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
+from dotenv import load_dotenv
+
+# ローカル環境での .env ファイルの読み込み
+load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
@@ -145,3 +149,7 @@ def delete_product(product_id):
 @app.route('/user')
 def user_page():
     return render_template('user.html')
+
+if __name__ == "__main__":
+    # WEBサーバー実行
+    app.run(host="0.0.0.0",port=5001,debug=True)
