@@ -1,10 +1,8 @@
-// Cart.jsからインポートしてくる
 import Cart from './Cart.js';
 
-// windowが開かれた時非同期通信でfunctionが実行される
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
-    const productIndex = parseInt(urlParams.get('index'), 10); // インデックスを整数に変換
+    const productIndex = parseInt(urlParams.get('index'), 10);
     const productDetail = document.getElementById('productDetail');
     const addToCartButton = document.getElementById('addToCartButton');
     const quantityInput = document.getElementById('quantity');
@@ -28,7 +26,7 @@ window.onload = async function () {
         productDetail.innerHTML = `
             <h2>${item.name}</h2>
             <p>価格: ${item.price}円</p>
-            <img src="../static/img/${item.img}" alt="${item.name}" class="product-card">
+            <img src="../static/img/${item.img}" alt="${item.name}" class="card-img">
             <p>${item.detail}</p>
         `;
 

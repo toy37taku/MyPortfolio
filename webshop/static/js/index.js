@@ -1,4 +1,3 @@
-// Cart.jsからインポート
 import Cart from './Cart.js';
 
 window.onload = async function () {
@@ -28,7 +27,7 @@ window.onload = async function () {
                 itemDiv.classList.add('col-md-4', 'mb-4'); // Bootstrapのグリッドクラスを使用
                 itemDiv.innerHTML = `
                 <div class="card">
-                    <img src="../static/img/${item.img}" class="card-img-top" alt="${item.name}">
+                    <img src="../static/img/${item.img}" class="card-img" alt="${item.name}">
                     <div class="card-body">
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">価格: ${item.price}円</p>
@@ -45,7 +44,7 @@ window.onload = async function () {
 
     window.openDetail = function (index) {
         const item = data.items[index];
-        const newWindow = window.open(`detail.html?index=${index}`, '_blank', 'width=600,height=800');
+        const newWindow = window.open(`detail.html?index=${index}`, '_blank', 'width=500,height=650');
 
         detailWindows.push(newWindow);
         newWindow.addEventListener('DOMContentLoaded', () => {

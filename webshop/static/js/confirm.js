@@ -1,4 +1,3 @@
-// Cart.jsからインポート
 import Cart from './Cart.js';
 
 window.onload = function () {
@@ -7,7 +6,6 @@ window.onload = function () {
     const purchaseButton = document.getElementById('purchaseButton');
     const returnButton = document.getElementById('returnButton');
 
-    // カートインスタンスを作成
     const myCart = new Cart();
 
     // カートの商品一覧を取得して表示する関数
