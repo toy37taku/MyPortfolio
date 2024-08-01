@@ -90,6 +90,19 @@ footer .container {
     line-height: 1.5;
 }
 
+.language-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.language-icons img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 /* ボタンのスタイル */
 .btn-primary {
     background-color: #007bff;
