@@ -113,3 +113,26 @@ footer .container {
     background-color: #0056b3;
     border-color: #004085;
 }
+
+/* トップに戻るボタンのスタイル */
+#scrollToTopBtn {
+    display: none; /* 初期は非表示 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color:#343a40;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color:#333;
+}

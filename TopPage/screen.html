@@ -210,6 +210,26 @@
         </div>
     </footer>
 
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="トップに戻る">&#8679;</button>
+
+    <script>
+        // トップに戻るボタンの表示制御
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        // トップに戻る関数
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
