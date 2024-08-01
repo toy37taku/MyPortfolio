@@ -80,6 +80,16 @@ footer .container {
     background-color: #f8f9fa;
 }
 
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
 /* ボタンのスタイル */
 .btn-primary {
     background-color: #007bff;

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/styles.css">
 </head>
@@ -25,46 +24,75 @@
     </header>
 
     <div class="container">
-        <h2 class="h2 mb-2">自己紹介</h2>
-
-        <section id="Introduction" class="py-5 bg-light">
-
+        <section id="introduction" class="py-5">
+            <h2 class="h2 mb-6">自己紹介</h2>
+            
             <div class="row">
-                <div class="col-md-6 mb-3">
-                    <h3>名前</h3>
-                    <p>豊岡 拓海</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            名前
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p class="card-text">豊岡 拓海</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <h3>出身</h3>
-                    <p>山口県宇部市</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            出身
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p class="card-text">山口県宇部市</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <h3>趣味</h3>
-                    <p>謎解き / 旅行 / カフェ巡り</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            趣味
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p class="card-text">謎解き / 旅行 / カフェ巡り</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <h3>経験言語</h3>
-                    <p>HTML / CSS / JavaScript(Vue.js) / C / Java / Python(Flask) / SQL(SQLite)</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            経験言語
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p class="card-text">HTML / CSS / JavaScript(Vue.js) / C / Java / Python(Flask) / SQL(SQLite)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <h3>学習スキル</h3>
-                    <p>データベース / Linuxサーバー構築 / AWS / GitHub</p>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            学習スキル
+                        </div>
+                        <div class="card-body d-flex align-items-center justify-content-center">
+                            <p class="card-text">データベース / Linuxサーバー構築 / AWS / GitHub</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-        
+
 
     <div class="container">
-        <section id="portfolio" class="py-5 bg-light">
+        <section id="portfolio" class="py-3">
+        <h2 class="h2 mb-6">ポートフォリオ</h2>
 
-            <h2 class="h2 mb-2">ポートフォリオ</h2>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title"><a
-                                    href="https://toy37taku.github.io/MyPortfolio/dogapp/dogapp.html">DogDetailsApp</a>
+                            <h3 class="card-title">
+                                <a href="https://toy37taku.github.io/MyPortfolio/dogapp/dogapp.html">DogDetailsApp</a>
                             </h3>
                             <p class="card-text">
                                 犬の画像をランダムで表示させるAPIを使ったアプリケーションです。犬種を選択すると、その犬種の画像と特徴が表示され、犬小屋に戻す機能もあります。<br>
@@ -80,8 +108,8 @@
                 <div class="col-md-6 mb-4">
                     <div class="card">
                         <div class="card-body">
-                            <h3 class="card-title"><a
-                                    href="https://toy37taku.github.io/MyPortfolio/webshop/user/index.html">ECサイト(ユーザー向けTOP画面)</a>
+                            <h3 class="card-title">
+                                <a href="https://toy37taku.github.io/MyPortfolio/webshop/user/index.html">ECサイト(ユーザーTOP画面)</a>
                             </h3>
                             <h3 class="card-title"><a href="./screen.html">管理者画面(説明ページ)</a></h3>
                             <p class="card-text">ユーザー側はJavaScriptで、管理者側はPythonで作成したECサイトです。<br>
@@ -94,12 +122,19 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card">
-                        現在、Pythonを使った"タイムレコーダーアプリ"を開発中です。<br>従業員登録および打刻時間のDB(SQL)へのCRUDをメインとしたアプリとなる予定です。<br>完成次第こちらにアップして参ります。
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                タイムレコーダーアプリ[開発中]
+                            </h4>
+                            <p class="card-text">Pythonを使った"タイムレコーダーアプリ"を開発中です。<br>
+                                従業員登録および打刻時間のDB(SQL)へのCRUDをメインとしたアプリとなる予定です。<br>
+                                完成次第こちらにアップいたします。</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
     </div>
-    </section>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <div class="container">
